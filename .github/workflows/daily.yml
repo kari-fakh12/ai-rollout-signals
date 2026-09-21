@@ -1,0 +1,36 @@
+name: daily signals
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # every day, 05:00 UTC (07:00 in Berlin in summer)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Public job posts only. No secrets needed.
+      - name: Find signals
+        run: python3 ai_rollout_signals.py --pages 15
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output
+          if [ -d state ]; then git add state; fi
+          if git diff --cached --quiet; then
+            echo "nothing new today"
+          else
+            git commit -m "signals $(date -u +%F)"
+            git push
+          fi

@@ -1,0 +1,488 @@
+{
+  "name": "AI rollout signals (DACH)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 7 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Every day 07:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        300
+      ],
+      "id": "ee628c38-82b6-533e-9c0b-9fd8ef6fc462"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Arbeitnow returns about 100 jobs per page, newest first. 10 pages covers\n// roughly the last couple of weeks.\nconst PAGES = 10;\nreturn Array.from({ length: PAGES }, (_, i) => ({ json: { page: i + 1 } }));\n"
+      },
+      "name": "Arbeitnow pages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        180
+      ],
+      "id": "d2860e3b-7f1d-55bb-a85f-5b7835fdc880"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.arbeitnow.com/api/job-board-api?page={{ $json.page }}",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1500
+            }
+          }
+        }
+      },
+      "name": "Get Arbeitnow page",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        180
+      ],
+      "onError": "continueRegularOutput",
+      "id": "dd37ef38-8201-5183-87dc-ab7606561d26"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Bundesagentur für Arbeit searches for people who will own an AI rollout.\nconst QUERIES = [\n  'KI-Manager', 'KI Manager', 'AI Manager', 'Head of AI', 'Leiter KI', 'Leitung KI',\n  'KI-Beauftragter', 'KI-Koordinator', 'KI-Referent', 'KI-Transformation', 'AI Transformation',\n  'AI Enablement', 'AI Adoption', 'KI-Einführung', 'AI Lead', 'KI Lead', 'KI-Strategie',\n  'AI Governance', 'KI Governance', 'Microsoft Copilot', 'ChatGPT', 'Product Owner KI',\n];\nreturn QUERIES.map(query => ({ json: { query } }));\n"
+      },
+      "name": "BA searches",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        420
+      ],
+      "id": "51afa72f-d6e2-5073-8683-951a83d758ab"
+    },
+    {
+      "parameters": {
+        "url": "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v6/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "was",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "size",
+              "value": "50"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "angebotsart",
+              "value": "1"
+            },
+            {
+              "name": "zeitarbeit",
+              "value": "false"
+            },
+            {
+              "name": "pav",
+              "value": "false"
+            },
+            {
+              "name": "veroeffentlichtseit",
+              "value": "30"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "jobboerse-jobsuche"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 500
+            }
+          }
+        }
+      },
+      "name": "Search Bundesagentur",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        420
+      ],
+      "onError": "continueRegularOutput",
+      "id": "c7f7b915-ee2f-55ab-8b5d-dc649962bb22"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Flatten the search results, keep titles that are about AI, drop repeats,\n// and build the detail URL (the API wants the reference number in base64).\nconst AI_TITLE = /\\b(ai|ki|künstliche intelligenz|artificial intelligence|genai|llm)\\b|copilot|chatgpt/i;\nconst MAX_DETAILS = 250;\nconst seen = new Set();\nconst out = [];\nfor (const item of $input.all()) {\n  for (const s of (item.json.ergebnisliste || [])) {\n    const ref = s.referenznummer;\n    if (!ref || seen.has(ref) || !AI_TITLE.test(s.stellenangebotsTitel || '')) continue;\n    seen.add(ref);\n    out.push({ json: {\n      referenznummer: ref,\n      detailUrl: 'https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobdetails/' + Buffer.from(ref).toString('base64'),\n    } });\n  }\n}\nreturn out.slice(0, MAX_DETAILS);\n"
+      },
+      "name": "Pick AI job titles",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        420
+      ],
+      "id": "bcfccc17-dbc9-53e6-8368-8714867477f8"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.detailUrl }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "jobboerse-jobsuche"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 300
+            }
+          }
+        }
+      },
+      "name": "Get BA job details",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        420
+      ],
+      "onError": "continueRegularOutput",
+      "id": "aa2302e6-b7fe-5406-ba19-db558bd3d8f8"
+    },
+    {
+      "parameters": {
+        "mode": "append"
+      },
+      "name": "All job posts",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        1200,
+        300
+      ],
+      "id": "eb220561-c8c0-50fc-8b84-5e9fca712687"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Score companies from Arbeitnow job posts. Port of ai_rollout_signals.py.\n// Input: one item per API page ({ data: [jobs] }). Output: one item per company\n// with at least one AI signal. Points: +40 AI owner, +30 rollout, +20 GDPR + AI,\n// +10 looks mid-size or large (heuristic).\n\nconst POINTS = { ai_owner: 40, rollout: 30, gdpr_ai: 20, size: 10 };\n\nconst plain = (s) => (s || '')\n  .replace(/<[^>]+>/g, ' ')\n  .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '\"').replace(/&#39;/g, \"'\")\n  .replace(/&lt;/g, '<').replace(/&gt;/g, '>')\n  .replace(/\\s+/g, ' ').trim();\n\n// ---- DACH filter\nconst DACH_CODES = /\\b(DE|AT|CH|DEU|AUT|CHE)\\b/;\nconst DACH = /(deutschland|germany|dach|österreich|austria|schweiz|switzerland|berlin|münchen|munich|hamburg|köln|cologne|frankfurt|stuttgart|düsseldorf|leipzig|dresden|hannover|nürnberg|nuremberg|bremen|essen|dortmund|bochum|bonn|mannheim|karlsruhe|heidelberg|münster|augsburg|wiesbaden|mainz|darmstadt|freiburg|aachen|kiel|potsdam|chemnitz|kassel|bielefeld|regensburg|ingolstadt|würzburg|ulm|heilbronn|bayern|bavaria|hessen|sachsen|niedersachsen|nordrhein|wien|vienna|graz|linz|salzburg|innsbruck|zürich|zurich|basel|bern|genf|geneva|lausanne|luzern|zug|st\\. ?gallen)/i;\nconst NON_DACH = /\\b(london|uk|united kingdom|paris|france|amsterdam|netherlands|madrid|barcelona|spain|lisbon|milan|italy|dublin|warsaw|poland|prague|stockholm|copenhagen|brussels|usa|united states|canada|new york|india|singapore)\\b/i;\nconst GERMAN = /\\b(und|wir|sie|die|der|das|für|mit|unser|unsere|ihre|deine|bei)\\b/gi;\nfunction isDach(loc, text) {\n  if (DACH.test(loc) || DACH_CODES.test(loc)) return true;\n  if (NON_DACH.test(loc)) return false;\n  return ((text.slice(0, 3000).match(GERMAN)) || []).length >= 25;\n}\n\n// ---- signals\nconst TITLE_AI = /\\b(ai|ki|künstliche intelligenz|artificial intelligence|genai|llm)\\b/i;\nconst OWNER_TITLE = new RegExp([\n  'head of (ai|artificial intelligence|genai|generative ai|ki|künstliche intelligenz)\\\\b',\n  '\\\\b(leiter|leiterin|leitung|referent|referentin|manager|managerin|koordinator|beauftragte[rn]?|verantwortliche[rn]?)\\\\s+(für\\\\s+)?(ki|künstliche intelligenz|ai)\\\\b',\n  '\\\\b(ki|ai|genai)[- ](lead|manager|managerin|beauftragte[rn]?|officer|champion|koordinator\\\\w*|referent\\\\w*|owner|project manager|projektleit\\\\w*|transformation\\\\w*|enablement|adoption|governance|strategy|strategie|innovation|operations|change)\\\\b',\n  '\\\\b(ki|ai)[- ]?(&|und|and)\\\\s+(automation|automatisierung|digitalisierung|digital\\\\w*)\\\\s+(lead|manager\\\\w*|specialist|spezialist\\\\w*|owner)\\\\b',\n  '\\\\b(enablement|adoption|innovation|governance|strategy|strategie|automation|automatisierung|operations|digitalisierung)\\\\b.{0,25}\\\\b(ai|ki)\\\\b',\n  '\\\\bproduct owner\\\\b.{0,25}\\\\b(ai|ki)\\\\b',\n].join('|'), 'i');\nconst BUILDER_TITLE = /\\b(engineer|engineering|entwickler\\w*|developer|scientist|research\\w*|architect\\w*|annotation|trainer|tester|evaluation|sales|account executive|account manager|business development|vertrieb\\w*|marketing|seo|content|creator|designer|recruit\\w*|consultant|\\w*berater\\w*|presales|solution\\w*|social media|growth|search|security|cyber\\w*|jurist\\w*|policy)\\b/i;\nconst JUNIOR_TITLE = /(werkstudent|working student|praktik|\\bintern\\b|internship|trainee|thesis|azubi|ausbildung|\\bstudent\\b|\\bjunior\\b|dual)/i;\nconst PRODUCT_OR_DATA = /\\b(product (owner|manager|lead)|produktmanager\\w*|data science|analytics|machine learning)\\b/i;\nconst CLIENT_FACING = /\\b(sales|account executive|account manager|business development|vertrieb\\w*|consultant|\\w*berater\\w*|presales|solution\\w*|forward deployed|customer success|implementation|deployment|trainer)\\b/i;\n\nconst AI = '(?:ki|ai|genai|generative[nrs]? (?:ki|ai)|künstliche[nr]? intelligenz|llms?|chatgpt|copilot)(?![- ](?:assisted|generated|powered|driven|native|based|coding|code|search))';\nconst STAFF = '(?:mitarbeitende\\\\w*|mitarbeiter\\\\w*|beschäftigte\\\\w*|kolleg\\\\w+|belegschaft|employees|staff|workforce|colleagues|fachbereiche\\\\w*|fachabteilungen|abteilungen|teams|business units)';\nconst OUR = '(?:our|unsere[nmrs]?|des unternehmens|konzernweit\\\\w*|unternehmensweit\\\\w*)';\nconst ROLLOUT = [\n  ['KI-Einführung', '\\\\bki[- ]einführung\\\\b|einführung (?:von |der |neuer )?(?:generativer |generativen )?(?:ki|künstlicher intelligenz|ai)\\\\b|einführung (?:von |der |neuer )?(?:ki|ai)[- ]\\\\w+|einsatz von (?:ki|künstlicher intelligenz) (?:im unternehmen|bei uns)'],\n  ['AI adoption across the company', '\\\\b(?:ai|ki|genai)[- ]adoption\\\\b[^.]{0,80}\\\\b(?:across|throughout|within) (?:the |our )?(?:company|organi[sz]ation|business|group|teams)|\\\\b(?:drive|driving|lead|leading|accelerat\\\\w+|foster\\\\w*)\\\\b (?:the )?(?:(?:ai|genai|ki)[- ]adoption|adoption of (?:generative )?(?:ai|genai))\\\\b'],\n  ['AI rollout', '\\\\b(?:ai|ki|copilot|genai|llm)[- ]roll-?outs?\\\\b|\\\\broll(?:ing)?[- ]out (?:of )?(?:generative )?(?:ai|ki|copilot|genai)\\\\b'],\n  ['ChatGPT Enterprise', '\\\\bchatgpt (?:enterprise|team|business)\\\\b'],\n  ['Microsoft Copilot', '\\\\b(?:microsoft|ms|m365|microsoft 365) ?copilot\\\\b|\\\\bcopilot studio\\\\b'],\n  ['Azure OpenAI', '\\\\bazure openai\\\\b'],\n  ['an internal AI strategy', OUR + ' (?:ki|ai|genai)[- ](?:strategie|strategy|roadmap|initiativen|initiatives|programm?e?)\\\\b'],\n  ['internal AI tools', '\\\\b(?:intern\\\\w*|internal)[- ](?:ki|ai|genai|llm)[- ]?(?:tools?|lösungen|anwendungen|assistenten|assistants?|plattform|platform|chatbots?|agenten|agents)\\\\b'],\n  ['AI for the whole company',\n    '\\\\b' + AI + '\\\\b[^.]{0,80}\\\\b(?:across|throughout) (?:the |our |all )?(?:company|organi[sz]ation|business|' + STAFF + ')\\\\b' +\n    '|\\\\b(?:unternehmensweit\\\\w*|konzernweit\\\\w*|company-wide|organi[sz]ation-wide)\\\\b[^.]{0,60}\\\\b' + AI + '\\\\b' +\n    '|\\\\b' + AI + '\\\\b[^.]{0,60}\\\\b(?:unternehmensweit\\\\w*|konzernweit\\\\w*|company-wide)\\\\b' +\n    '|\\\\b(?:für|for) (?:unsere|our|alle|all) ' + STAFF + '\\\\b[^.]{0,60}\\\\b' + AI + '\\\\b'],\n  ['AI enablement / training for staff', '\\\\b(?:ki|ai)[- ](?:enablement|befähigung)\\\\b|\\\\bai champions?\\\\b|\\\\bki[- ](?:champions?|botschafter\\\\w*)|\\\\bai literacy\\\\b|\\\\bki[- ]schulung'],\n  ['AI governance', '\\\\b(?:ki|ai)[- ]governance\\\\b'],\n].map(([label, p]) => [label, new RegExp(p, 'i')]);\nconst AI_WORD = /\\b(ki|ai|künstliche\\w* intelligenz|artificial intelligence|genai|llms?|chatgpt|copilot|generative\\w*)\\b/i;\nconst GDPR = /(dsgvo|gdpr|datenschutz\\w*|data protection|data privacy|eu ai act|\\bai act\\b|ki-verordnung)/gi;\nconst SIZE_TEXT = /\\b(konzern\\w*|mittelstand\\w*|mittelständisch\\w*|marktführer\\w*|market leader|familienunternehmen|börsennotiert\\w*|standorten|offices in|niederlassungen|tochtergesellschaft\\w*)\\b|\\b(\\d{1,3}[.,]\\d{3}|\\d{3,})\\+?\\s*(mitarbeitende\\w*|mitarbeiter\\w*|beschäftigte\\w*|employees|colleagues)\\b/i;\n\n// ---- exclusions: Langdock, competitors, AI vendors, agencies, consultancies\nconst EXCLUDE = new Set(['langdock', 'openai', 'microsoft', 'glean', 'anthropic', 'google', 'alephalpha', 'deepl', 'deeplse',\n  'mistralai', 'cohere', 'nvidia', 'amazon', 'aws', 'ibm', 'salesforce', 'servicenow', 'sap', 'neulandai', 'celonis',\n  'jetbrains', 'datadog', 'intercom', 'parloa', 'n8n', 'ionos', 'telekom', 'databricks', 'snowflake', 'nebius',\n  'jobgether', 'accenture', 'capgemini', 'deloitte', 'pwc', 'kpmg', 'mckinsey', 'bcg', 'adesso', 'computacenter',\n  'bechtle', 'cancom', 'nttdata', 'bridgingit', 'communardo', 'cbscorporatebusinesssolutions']);\nconst VENDOR_NAME = /(\\.ai\\b|\\bai\\b|\\bki\\b|\\w+ai$|\\bmachine learning\\b|\\bintelligence\\b|\\bgpt\\b|\\bllm\\b)/i;\nconst VENDOR_TEXT = /\\b(ai|ki)[- ](startup|start-up|scale-?up|company|native|lab|labs)\\b|\\b(we|wir) (are|sind) (an? |ein\\w* )?(\\w+ ){0,3}(ai|ki)[- ]?(startup|company|unternehmen|platform|plattform|anbieter)\\b|\\b(we|wir) (build|develop|entwickeln|bauen)\\s+(\\w+ ){0,4}(ai|ki|llm|genai|agent\\w*)[- ]?(products?|platform|plattform|agents?|lösung\\w*|solutions?|software|models?)\\b|\\b(ai|ki|genai)[- ](powered|native|driven|based)\\s+(\\w+ ){0,2}(platform|plattform|software|saas|product|solution|startup)\\b|\\bfoundation models?\\b|\\bai health[- ]?tech\\b|\\bhealthcare ai\\b/i;\nconst AGENCY_NAME = /\\b(recruitment|recruiting (gmbh|ag)|staffing|personalvermittlung|personaldienst\\w*|personalberatung|headhunt\\w*|zeitarbeit|executive search)\\b/i;\nconst AGENCY = /\\b(personalvermittlung|arbeitnehmerüberlassung|zeitarbeit|headhunt\\w*|direktvermittlung|im auftrag (unseres|eines) (kunden|mandanten)|on behalf of (our|a) client|unser (kunde|mandant),? (ist|ein))\\b/i;\nconst CONSULTANCY_NAME = /\\b(consulting|consultants?|unternehmensberatung|beratungs\\w*|advisory|systemhaus|agentur|agency)\\b/i;\nconst CONSULTANCY = /\\b(unterstützen|begleiten|beraten) (wir )?(unsere[nr]?|unseren) (kunden|mandanten)\\b.{0,120}\\b(ki|ai|genai|copilot)\\b|\\b(we help|we support) (our )?(clients|customers)\\b.{0,120}\\b(ai|genai)\\b|\\b(ki|ai|genai|copilot)\\b.{0,120}\\b(für|bei) (unsere[nr]?|unseren) (kunden|mandanten)\\b|\\b(ai|ki|genai|copilot)\\b.{0,100}\\b(kundenprojekt\\w*|client projects?)\\b|\\b(kundenprojekt\\w*|client projects?)\\b.{0,100}\\b(ai|ki|genai|copilot)\\b/i;\n\nconst FILLER = new Set(['gmbh', 'ag', 'se', 'kg', 'co', 'mbh', 'ug', 'inc', 'ltd', 'group', 'gruppe', 'holding', 'ev', 'de', 'deutschland', 'germany', 'recruiting']);\nconst keyOf = (name) => (name || '').toLowerCase().split(' - ')[0].split(/[^a-z0-9äöüß]+/).filter(t => t && !FILLER.has(t)).join('');\n\nfunction rolloutHits(title, text) {\n  if (CLIENT_FACING.test(title)) return [];\n  const labels = ROLLOUT.filter(([, rx]) => rx.test(text)).map(([label]) => label);\n  if (JUNIOR_TITLE.test(title) && OWNER_TITLE.test(title) && TITLE_AI.test(title) && !BUILDER_TITLE.test(title)) {\n    labels.push('a student role in AI enablement');\n  }\n  return labels;\n}\nfunction isOwner(title, text) {\n  if (!TITLE_AI.test(title) || BUILDER_TITLE.test(title) || JUNIOR_TITLE.test(title)) return false;\n  if (PRODUCT_OR_DATA.test(title)) return rolloutHits(title, text).length > 0;\n  return OWNER_TITLE.test(title);\n}\nfunction gdprNearAi(text) {\n  for (const m of text.matchAll(GDPR)) {\n    if (AI_WORD.test(text.slice(Math.max(0, m.index - 250), m.index + m[0].length + 250))) return m[0];\n  }\n  return null;\n}\nfunction excluded(name, jobs) {\n  const k = keyOf(name);\n  if (EXCLUDE.has(k)) return 'Langdock, a competitor, big tech or a big IT consultancy';\n  if (VENDOR_NAME.test(name)) return 'name says AI company';\n  const head = jobs.slice(0, 5).map(j => j.text.slice(0, 1500)).concat(jobs.map(j => j.title)).join(' ');\n  if (VENDOR_TEXT.test(head)) return 'describes itself as an AI vendor';\n  if (AGENCY_NAME.test(name) || AGENCY.test(jobs.map(j => j.text).join(' '))) return 'staffing or recruiting agency';\n  if (CONSULTANCY_NAME.test(name) || CONSULTANCY.test(jobs.filter(j => TITLE_AI.test(j.title) || AI_WORD.test(j.text)).map(j => j.text).join(' '))) return 'sells AI or IT consulting';\n  return null;\n}\n\n// ---- collect jobs from both sources, group by company\n// Arbeitnow items are whole API pages ({ data: [...] }). Bundesagentur items are\n// single job details (stellenangebotsTitel, stellenangebotsBeschreibung, ...).\nconst cleanName = (n) => { n = (n || '').replace(/\\s+/g, ' ').trim(); return n.includes('@') ? n.split('@')[1] : n; };\nconst jobsIn = [];\nfor (const item of $input.all()) {\n  const d = item.json || {};\n  for (const j of (d.data || [])) {\n    jobsIn.push({ name: j.company_name, title: j.title, text: plain(j.description), url: j.url,\n                  location: (j.location || '').trim(), source: 'arbeitnow' });\n  }\n  if (d.stellenangebotsTitel && d.referenznummer) {\n    const a = ((d.stellenlokationen || [])[0] || {}).adresse || {};\n    jobsIn.push({ name: d.firma, title: d.stellenangebotsTitel, text: plain(d.stellenangebotsBeschreibung),\n                  url: 'https://www.arbeitsagentur.de/jobsuche/jobdetail/' + d.referenznummer,\n                  location: [a.ort, a.land].filter(Boolean).join(', ') || 'Deutschland', source: 'bundesagentur' });\n  }\n}\nconst byCompany = new Map();\nconst seenUrls = new Set();\nfor (const j of jobsIn) {\n  const name = cleanName(j.name);\n  const title = (j.title || '').trim();\n  if (!name || seenUrls.has(j.url)) continue;\n  seenUrls.add(j.url);\n  if (!isDach(j.location, title + ' ' + j.text)) continue;\n  const k = keyOf(name);\n  if (!byCompany.has(k)) byCompany.set(k, { name, jobs: [] });\n  byCompany.get(k).jobs.push({ title, text: j.text, url: j.url, location: j.location, source: j.source });\n}\n\n// ---- score\nconst out = [];\nfor (const [key, { name, jobs }] of byCompany) {\n  const signals = {};\n  const owner = jobs.find(j => isOwner(j.title, j.text));\n  if (owner) signals.ai_owner = { why: `hiring \"${owner.title}\"`, url: owner.url };\n  let best = null;\n  for (const j of jobs) {\n    const labels = rolloutHits(j.title, j.text);\n    if (labels.length && (!best || labels.length > best.labels.length)) best = { j, labels };\n  }\n  if (best) signals.rollout = { why: `\"${best.j.title}\" mentions ${[...new Set(best.labels)].join(', ')}`, url: best.j.url };\n  if (!Object.keys(signals).length) continue;\n  if (excluded(name, jobs)) continue;\n  for (const j of jobs) {\n    const g = gdprNearAi(j.text);\n    if (g) { signals.gdpr_ai = { why: `\"${j.title}\" mentions ${g} next to AI`, url: j.url }; break; }\n  }\n  const sizeText = jobs.map(j => (j.text.match(SIZE_TEXT) || [])[0]).find(Boolean);\n  if (jobs.length >= 3) signals.size = { why: `looks mid-size or large (${jobs.length} open roles on the board, heuristic)`, url: jobs[0].url };\n  else if (sizeText) signals.size = { why: `looks mid-size or large (post says \"${sizeText}\", heuristic)`, url: jobs[0].url };\n\n  const order = ['ai_owner', 'rollout', 'gdpr_ai', 'size'].filter(s => signals[s]);\n  out.push({ json: {\n    found: new Date().toISOString().slice(0, 10),\n    key,\n    company: name,\n    score: order.reduce((n, s) => n + POINTS[s], 0),\n    signals: order.join(';'),\n    why: order.map(s => `+${POINTS[s]} ${signals[s].why}`).join(' | '),\n    evidence_url: signals[order[0]].url,\n    location: [...new Set(jobs.map(j => j.location).filter(Boolean))].slice(0, 3).join('; '),\n    sources: [...new Set(jobs.map(j => j.source))].sort().join(';'),\n  } });\n}\nout.sort((a, b) => b.json.score - a.json.score || a.json.company.localeCompare(b.json.company));\nreturn out;\n"
+      },
+      "name": "Score companies",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        300
+      ],
+      "id": "ada1cb2b-36a8-5dd3-97ac-cf1d2d743111"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "475d28b8-6cf2-5040-ab1c-2597a81c68dd",
+              "leftValue": "={{ $json.score }}",
+              "rightValue": 30,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "name": "Score 30 or more",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        300
+      ],
+      "id": "23ba69ae-710c-5ea0-90d8-9b53ecc3c324"
+    },
+    {
+      "parameters": {
+        "operation": "removeItemsRepeatedInPreviousExecutions",
+        "logic": "removeItemsWithAlreadySeenKeyValues",
+        "dedupeValue": "={{ $json.key }}",
+        "options": {
+          "historySize": 10000
+        }
+      },
+      "name": "Only new companies",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        300
+      ],
+      "id": "b38916ca-77a3-5047-bbc0-e4beb44bb15c"
+    },
+    {
+      "parameters": {
+        "jsCode": "// One Slack message with the new companies of the day.\nconst rows = $input.all().map(i => i.json).sort((a, b) => b.score - a.score);\nif (!rows.length) return [];\nconst lines = rows.slice(0, 20).map(r => {\n  const top = r.why.split(' | ')[0];\n  return `*${r.score}* ${r.company} (${(r.location || '').split(';')[0]}): ${top} <${r.evidence_url}|job post>`;\n});\nconst more = rows.length > 20 ? `\\n...and ${rows.length - 20} more in the sheet.` : '';\nreturn [{ json: { text: `*AI rollout signals, ${rows[0].found}*: ${rows.length} new companies in DACH\\n` + lines.join('\\n') + more } }];\n"
+      },
+      "name": "Build digest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        200
+      ],
+      "id": "37fd801c-cd90-57ec-9dbf-8668d403f360"
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#ai-rollout-signals",
+          "mode": "name"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {
+          "unfurl_links": false
+        }
+      },
+      "name": "Post to Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        200
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "REPLACE_ME",
+          "name": "Slack account (set your own)"
+        }
+      },
+      "id": "ba062685-f3bc-535d-930f-42fd10e58a69"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "signals",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "name": "Append to Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2160,
+        420
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets account (set your own)"
+        }
+      },
+      "id": "a44a20ce-a761-534a-868f-d1763e141ce7"
+    }
+  ],
+  "connections": {
+    "Every day 07:00": {
+      "main": [
+        [
+          {
+            "node": "Arbeitnow pages",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "BA searches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Arbeitnow pages": {
+      "main": [
+        [
+          {
+            "node": "Get Arbeitnow page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Arbeitnow page": {
+      "main": [
+        [
+          {
+            "node": "All job posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BA searches": {
+      "main": [
+        [
+          {
+            "node": "Search Bundesagentur",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Bundesagentur": {
+      "main": [
+        [
+          {
+            "node": "Pick AI job titles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pick AI job titles": {
+      "main": [
+        [
+          {
+            "node": "Get BA job details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get BA job details": {
+      "main": [
+        [
+          {
+            "node": "All job posts",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "All job posts": {
+      "main": [
+        [
+          {
+            "node": "Score companies",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score companies": {
+      "main": [
+        [
+          {
+            "node": "Score 30 or more",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score 30 or more": {
+      "main": [
+        [
+          {
+            "node": "Only new companies",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Only new companies": {
+      "main": [
+        [
+          {
+            "node": "Build digest",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Append to Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build digest": {
+      "main": [
+        [
+          {
+            "node": "Post to Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin"
+  },
+  "tags": [],
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

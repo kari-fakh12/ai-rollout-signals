@@ -1,0 +1,63 @@
+# AI rollout signals, 2026-09-21
+
+105 companies in DACH scored 30 or more. 0 skipped as already reported, 0 below the cutoff, 24 left out by the exclusion rules.
+
+## Sources
+
+| Source | OK calls | Failed calls | Notes |
+|---|---|---|---|
+| arbeitnow | 16 | 0 | 1691 jobs, 1349 in DACH, 511 companies |
+| bundesagentur | 35 | 0 | 364 AI job titles found, 364 read |
+
+## Points
+
+| Signal | Points |
+|---|---|
+| ai_owner | +40 |
+| rollout | +30 |
+| gdpr_ai | +20 |
+| size | +10 |
+
+## Left out
+
+| Reason | Companies |
+|---|---|
+| Langdock, a competitor, big tech or a big IT consultancy | 8 |
+| describes itself as an AI vendor | 7 |
+| sells AI or IT consulting | 8 |
+| staffing or recruiting agency | 1 |
+
+## Top companies
+
+| # | Company | Score | Why | Evidence |
+|---|---|---|---|---|
+| 1 | ADAC | 100 | +40 hiring "Spezialist KI und digitale Transformation (m/w/d)" / +30 "Prozessautomatisierungsspezialist - Schwerpunkt KI-Agenten-Technologien (w/m/d)" mentions AI for the whole company / +20 "Prozessautomatisierungsspezialist - Schwerpunkt KI-Agenten-Technologien (w/m/d)" mentions AI Act next to AI / +10 looks mid-size or large (5 open roles on the board, heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/13644-309436-S |
+| 2 | AggerEnergie GmbH | 100 | +40 hiring "KI-Manager (m/w/d) in Gummersbach" / +30 "KI-Manager (m/w/d) in Gummersbach" mentions an internal AI strategy, AI for the whole company / +20 "KI-Manager (m/w/d) in Gummersbach" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "220 Mitarbeitende", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1207209991-S |
+| 3 | Alexianer IT GmbH | 100 | +40 hiring "KI-Lead (m/w/d) Alexianer, Alexianer Holding" / +30 "KI-Lead (m/w/d) Alexianer, Alexianer Holding" mentions an internal AI strategy, AI for the whole company / +20 "KI-Lead (m/w/d) Alexianer, Alexianer Holding" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "Standorten", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/12811-2295333-S |
+| 4 | benuta GmbH | 100 | +40 hiring "AI Strategy & Automation Lead (m/w/d)" / +30 "AI Strategy & Automation Lead (m/w/d)" mentions AI for the whole company / +20 "AI Strategy & Automation Lead (m/w/d)" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "Marktführer", heuristic) | https://www.arbeitnow.com/jobs/companies/benuta-gmbh/ai-strategy-automation-lead-bonn-252312 |
+| 5 | Chemnitzer Verlag und Druck GmbH & Co.KG | 100 | +40 hiring "Product Owner (m/w/d) KI" / +30 "Product Owner (m/w/d) KI" mentions KI-Einführung, an internal AI strategy, AI for the whole company / +20 "Product Owner (m/w/d) KI" mentions EU AI Act next to AI / +10 looks mid-size or large (post says "konzernweiten", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003436494-S |
+| 6 | Conrad Electronic SE | 100 | +40 hiring "Director AI Strategy (m/w/d)" / +30 "Director AI Strategy (m/w/d)" mentions AI for the whole company, AI governance / +20 "Director AI Strategy (m/w/d)" mentions AI Act next to AI / +10 looks mid-size or large (post says "Familienunternehmen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1205960478-S |
+| 7 | Deichmann SE | 100 | +40 hiring "Product Owner Agentic AI (m/w/d)" / +30 "Product Owner Agentic AI (m/w/d)" mentions AI for the whole company / +20 "Product Owner Agentic AI (m/w/d)" mentions EU AI Act next to AI / +10 looks mid-size or large (post says "Familienunternehmen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/14774-BB-562995-12683-869-S |
+| 8 | Harald Gollwitzer GmbH Spezialtiefbau Erd- und Tiefbau | 100 | +40 hiring "IT Manager – Digitalisierung & KI (m/w/d)" / +30 "IT Manager – Digitalisierung & KI (m/w/d)" mentions AI governance / +20 "IT Manager – Digitalisierung & KI (m/w/d)" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "Mittelstand", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1207615333-S |
+| 9 | Hornetsecurity GmbH | 100 | +40 hiring "Team Lead AI Governance & Enablement" / +30 "Team Lead AI Governance & Enablement" mentions KI-Einführung, Microsoft Copilot, AI for the whole company, AI enablement / training for staff, AI governance / +20 "AI Automation & Enablement Specialist" mentions data protection next to AI / +10 looks mid-size or large (3 open roles on the board, heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003356121-S |
+| 10 | HOWOGE Wohnungsbauges. mbH | 100 | +40 hiring "KI-Manager (m/w/d)" / +30 "KI-Manager (m/w/d)" mentions AI for the whole company / +20 "KI-Manager (m/w/d)" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "1.400 Mitarbeitenden", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/15882-965006624-S |
+| 11 | Merck KGaA | 100 | +40 hiring "Manager / Senior Manager Inhouse Consulting - Data & AI Strategy (all genders, full-/part-time)" / +30 "(Senior) AI Engineer - Data & AI Organisation (all genders, full-/part-time)" mentions AI for the whole company, AI enablement / training for staff / +20 "Manager / Senior Manager Inhouse Consulting - Data & AI Strategy (all genders, full-/part-time)" mentions EU AI Act next to AI / +10 looks mid-size or large (post says "offices in", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/12649-1603505-1-S |
+| 12 | R.A.T.H. GmbH | 100 | +40 hiring "Mitarbeiter Prozessdigitalisierung & KI (m/w/d) - befristet auf 12 Monate" / +30 "Mitarbeiter Prozessdigitalisierung & KI (m/w/d) - befristet auf 12 Monate" mentions Microsoft Copilot / +20 "Mitarbeiter Prozessdigitalisierung & KI (m/w/d) - befristet auf 12 Monate" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "Standorten", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/20918-0066716708-S |
+| 13 | RATHGEBER GmbH & Co. KG | 100 | +40 hiring "KI- und Automatisierungsspezialist (m/w/d) Digitalisierung & IT" / +30 "KI- und Automatisierungsspezialist (m/w/d) Digitalisierung & IT" mentions KI-Einführung, AI governance / +20 "KI- und Automatisierungsspezialist (m/w/d) Digitalisierung & IT" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "mittelständischen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003428670-S |
+| 14 | Winner Spedition GmbH & Co. KG | 100 | +40 hiring "KI-Manager (m/w/d) in Iserlohn" / +30 "KI-Manager (m/w/d) in Iserlohn" mentions KI-Einführung, an internal AI strategy / +20 "KI-Manager (m/w/d) in Iserlohn" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "Familienunternehmen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003431575-S |
+| 15 | ZABAG International GmbH | 100 | +40 hiring "Corporate AI Manager / KI-Projektleitung (m/w/d)" / +30 "Corporate AI Manager / KI-Projektleitung (m/w/d)" mentions KI-Einführung, Microsoft Copilot, AI for the whole company / +20 "Corporate AI Manager / KI-Projektleitung (m/w/d)" mentions Datenschutz next to AI / +10 looks mid-size or large (post says "mittelständisches", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003290893-S |
+| 16 | Aareal Bank AG | 90 | +40 hiring "Product Owner - M365 Copilot & AI Platforms (w/m/d)​" / +30 "Product Owner - M365 Copilot & AI Platforms (w/m/d)​" mentions Microsoft Copilot, AI governance / +20 "AI Solution Architect & Delivery Manager (m/w/d)" mentions Datenschutz next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/12336-a26f504j0448815-S |
+| 17 | Circle K Deutschland GmbH | 90 | +40 hiring "Advisor Digital & AI Enablement (m/w/d), befristet für 1,5 Jahre (Elternzeitvertretung)" / +30 "Advisor Digital & AI Enablement (m/w/d), befristet für 1,5 Jahre (Elternzeitvertretung)" mentions Microsoft Copilot, AI enablement / training for staff, AI governance / +20 "Advisor Digital & AI Enablement (m/w/d), befristet für 1,5 Jahre (Elternzeitvertretung)" mentions EU AI Act next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/12951-67a7b576-ca9a-4738--S |
+| 18 | EUROBAUSTOFF Handelsgesellschaft mbH & Co. KG | 90 | +40 hiring "Teamleiter (m/w/d) KI & Automation - Digitalisierung" / +30 "Teamleiter (m/w/d) KI & Automation - Digitalisierung" mentions AI for the whole company, AI governance / +20 "Teamleiter (m/w/d) KI & Automation - Digitalisierung" mentions Datenschutz next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-4929162764-S |
+| 19 | FINOVESTA GmbH | 90 | +40 hiring "AI Enablement & Governance Manager (m/w/d)" / +30 "AI Enablement & Governance Manager (m/w/d)" mentions Microsoft Copilot, an internal AI strategy, AI for the whole company / +20 "AI Enablement & Governance Manager (m/w/d)" mentions Datenschutz next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1002296151-S |
+| 20 | gematik GmbH | 90 | +40 hiring "Senior Strategy Advisor:in AI (all genders)" / +30 "Senior Strategy Advisor:in AI (all genders)" mentions AI governance / +20 "Senior Strategy Advisor:in AI (all genders)" mentions EU AI Act next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1002944492-S |
+| 21 | neoshare | 90 | +40 hiring "Data Protection & AI Governance Advisor (m/w/d)" / +30 "Data Protection & AI Governance Advisor (m/w/d)" mentions AI governance / +20 "Data Protection & AI Governance Advisor (m/w/d)" mentions Datenschutzmanagementsystem next to AI | https://www.arbeitnow.com/jobs/companies/neoshare/data-protection-ai-governance-advisor-munchen-387056 |
+| 22 | Pat & Patachon GmbH | 90 | +40 hiring "KI Manager / AI Process Manager (m/w/d)" / +30 "KI Manager / AI Process Manager (m/w/d)" mentions Microsoft Copilot, AI for the whole company / +20 "KI Manager / AI Process Manager (m/w/d)" mentions Datenschutz next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003347597-S |
+| 23 | ROLAND-Gruppe | 90 | +40 hiring "Product Owner KI (m/w/d) (Voll- oder Teilzeit)" / +30 "Product Owner KI (m/w/d) (Voll- oder Teilzeit)" mentions AI governance / +20 "Product Owner KI (m/w/d) (Voll- oder Teilzeit)" mentions Datenschutz next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/13644-307195-S |
+| 24 | SMA Solar Technology AG | 90 | +40 hiring "Senior AI Governance and Enablement Professional (m/w/d) ..." / +30 "Senior AI Governance and Enablement Professional (m/w/d) ..." mentions AI for the whole company, AI governance / +20 "Senior AI Governance and Enablement Professional (m/w/d) ..." mentions EU AI Act next to AI | https://www.arbeitsagentur.de/jobsuche/jobdetail/15537-JOB-854666-S |
+| 25 | BG prevent GmbH | 80 | +40 hiring "Senior Experte KI / AI Enablement Expert" / +30 "Senior Experte KI / AI Enablement Expert" mentions KI-Einführung, Microsoft Copilot, AI enablement / training for staff / +10 looks mid-size or large (post says "3.700 Mitarbeitenden", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/12951-8d9c6028-5a49-4dde--S |
+| 26 | Brunner GmbH Stühle Tische Objektmöbel | 80 | +40 hiring "Prozessentwickler Digitalisierung & KI (m/w/d)" / +30 "Prozessentwickler Digitalisierung & KI (m/w/d)" mentions Microsoft Copilot / +10 looks mid-size or large (post says "Familienunternehmen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003287619-S |
+| 27 | Die Autobahn GmbH des Bundes Zentrale Berlin | 80 | +40 hiring "Teamleitung Digitalisierung & KI (w/m/d)" / +30 "Teamleitung Digitalisierung & KI (w/m/d)" mentions AI for the whole company, AI governance / +10 looks mid-size or large (post says "15.000 Mitarbeitenden", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/17751-44444449-915-S |
+| 28 | Dr. Ausbüttel GmbH & Co. KG | 80 | +40 hiring "Head of AI & Data Science (m/w/d), Dortmund" / +30 "Head of AI & Data Science (m/w/d), Dortmund" mentions AI for the whole company / +10 looks mid-size or large (post says "Familienunternehmen", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/12811-2340154-S |
+| 29 | GWH Wohnungsgesellschaft mbH Hessen | 80 | +40 hiring "Teamlead (m/w/d) Customer Service & KI-Transformation" / +30 "Teamlead (m/w/d) Customer Service & KI-Transformation" mentions KI-Einführung / +10 looks mid-size or large (post says "650 Mitarbeitenden", heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/14012-20267hcl5cku-000-S |
+| 30 | ROSSMANN | 80 | +40 hiring "Product Owner (m/w/d) Agentic AI Platform – Microsoft" / +30 "Product Owner (m/w/d) Agentic AI Platform – Microsoft" mentions AI enablement / training for staff / +10 looks mid-size or large (4 open roles on the board, heuristic) | https://www.arbeitsagentur.de/jobsuche/jobdetail/13644-312090-S |
