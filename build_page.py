@@ -30,7 +30,7 @@ def row_html(i, r):
     tags = "".join(
         f'<span class="tag t-{LABELS[s][1]}">{LABELS[s][0]}</span>'
         for s in r["signals"].split(";") if s in LABELS)
-    why = "".join(f"<li>{html.escape(w.strip())}</li>" for w in r["why"].split("|") if w.strip())
+    why = "".join(f"<li>{html.escape(w.strip())}</li>" for w in r["why"].split(" | ") if w.strip())
     ev = html.escape(r["evidence_url"])
     more = [u for u in r.get("more_evidence", "").split() if u.startswith("http")][:2]
     more_html = "".join(f' · <a href="{html.escape(u)}" target="_blank" rel="noopener">another post</a>' for u in more)
