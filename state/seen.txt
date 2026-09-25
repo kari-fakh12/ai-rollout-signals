@@ -1,3 +1,4 @@
+3e
 8com
 aarealbank
 acadon
@@ -18,6 +19,7 @@ auxmoney
 benuta
 bgbaubgderbauwirtschaft
 bgprevent
+bikbsbservice
 bikeleasing
 brunnerstühletischeobjektmöbel
 bung
@@ -33,6 +35,7 @@ codico
 commerzbank
 commerzrealcommerzrealdüsseldorf
 conradelectronic
+cosuno
 currenta
 deichmann
 deutscheschlaganfallhilfe
@@ -53,6 +56,8 @@ es
 eurobaustoffhandelsgesellschaft
 evangelischesklinikumgelsenkirchen
 everllence
+evoilafrankfurt
+evotec
 exoconmanagement
 finovesta
 frank
@@ -73,6 +78,7 @@ jschmalz
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
+kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
 liebherrdigitaldevelopmentcenter
 lindner
 medhochschulehannover
@@ -85,6 +91,7 @@ moonfare
 mstransporte
 neoshare
 nexperia
+olx
 onlinedoctor
 ostrom
 pathwaysolutions
@@ -104,14 +111,18 @@ rth
 shwwerkzeugmaschinen
 signaliduna
 smasolartechnology
+stackfuel
 stadtwerkeesslingenamneckar
 statista
 stilord
+sundaynatural
 team
 tgw
+thinkaboutit
 topvermögensverwaltung
 trbo
 tsiconsumergoods
+tüvsüd
 uniassist
 uniontankeckstein
 universitätsklinikumkölnaör
@@ -124,7 +135,10 @@ wellendorffgoldcreationen
 werhahnnauen
 wilhelmtheisheizungsbausanitinstallation
 winnerspedition
+wirtschaftsgenossenschaftdeutschertierärzteeg
+xolife
 xxxlutz
 yoursquares
 zabaginternational
 zealnetwork
+zeinpharma
