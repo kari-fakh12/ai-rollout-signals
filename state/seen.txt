@@ -16,6 +16,7 @@ arbeitsservicestellefürinternationalestudienbewerbungenuniassist
 artefact
 atania
 auxmoney
+awin
 benuta
 bgbaubgderbauwirtschaft
 bgprevent
@@ -63,6 +64,7 @@ finovesta
 flossbachvonstorch
 frank
 gematik
+goodhood
 grimmelandmaschinenfabrik
 gwhwohnungsgesellschafthessen
 hamburgerenergienetze
@@ -95,6 +97,7 @@ nexperia
 olx
 onlinedoctor
 ostrom
+p3security
 pathwaysolutions
 patpatachon
 pkfwms
