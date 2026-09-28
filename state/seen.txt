@@ -37,6 +37,7 @@ commerzbank
 commerzrealcommerzrealdüsseldorf
 conradelectronic
 cosuno
+cryptofinance
 currenta
 deichmann
 deutscheschlaganfallhilfe
@@ -96,6 +97,7 @@ neoshare
 nexperia
 olx
 onlinedoctor
+orbem
 ostrom
 p3security
 pathwaysolutions
@@ -117,12 +119,14 @@ signaliduna
 smasolartechnology
 stackfuel
 stadtwerkeesslingenamneckar
+stark
 statista
 stilord
 sundaynatural
 team
 tgw
 thinkaboutit
+tiptopdienstleistungen
 topvermögensverwaltung
 trbo
 tsiconsumergoods
@@ -135,6 +139,7 @@ verwaltungsberufsgenossenschaftvbg
 vivantesnetzwerkfürgesundheit
 vonovia
 wago
+wbstrainingberlin
 wellendorffgoldcreationen
 werhahnnauen
 wilhelmtheisheizungsbausanitinstallation
