@@ -14,6 +14,7 @@ alnatura
 amssolutionkaarst
 arbeitsservicestellefürinternationalestudienbewerbungenuniassist
 artefact
+artefactlinkedin
 atania
 auxmoney
 awin
@@ -33,6 +34,7 @@ ckm
 clicksdigital
 climate
 codico
+collaborationbetterstheworld
 commerzbank
 commerzrealcommerzrealdüsseldorf
 conradelectronic
@@ -75,10 +77,13 @@ heimerlemeulecom
 hfbsteuerberatungsgesellschaft
 hornetsecurity
 howogewohnungsbauges
+hymmenmaschinenanlagenbau
 ideallebensversicherung
 infraservgendorf
+ingenieurbürozammit
 innovation
 jschmalz
+khs
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
@@ -116,6 +121,8 @@ rossmann
 rth
 shwwerkzeugmaschinen
 signaliduna
+smarktmehrwert
+smartly
 smasolartechnology
 stackfuel
 stadtwerkeesslingenamneckar
@@ -134,6 +141,7 @@ tüvsüd
 uniassist
 uniontankeckstein
 universitätsklinikumkölnaör
+valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
 vivantesnetzwerkfürgesundheit
