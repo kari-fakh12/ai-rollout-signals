@@ -2,6 +2,7 @@
 8com
 aarealbank
 acadon
+aclue
 adac
 aggerenergie
 akkodistechexperts
@@ -23,6 +24,8 @@ bgbaubgderbauwirtschaft
 bgprevent
 bikbsbservice
 bikeleasing
+blpdigital
+botsandpeopleproduct
 brunnerstühletischeobjektmöbel
 bung
 bwebrütereiweserems
@@ -111,7 +114,9 @@ pkfwms
 plancraft
 planinternational
 pressedruckverlags
+privatize
 rallgemeineversicherung
+ramp106
 rathgeber
 renk
 rewedigital
@@ -145,6 +150,7 @@ valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
 vivantesnetzwerkfürgesundheit
+vivenu
 vonovia
 wago
 wbstrainingberlin
