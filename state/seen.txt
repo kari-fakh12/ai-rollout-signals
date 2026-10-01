@@ -19,6 +19,8 @@ artefactlinkedin
 atania
 auxmoney
 awin
+bato
+beckhoffautomation
 benuta
 bgbaubgderbauwirtschaft
 bgprevent
@@ -69,6 +71,7 @@ exoconmanagement
 finovesta
 flossbachvonstorch
 frank
+freseniusaa
 gematik
 goodhood
 grimmelandmaschinenfabrik
@@ -77,6 +80,7 @@ hamburgerenergienetze
 handwerkskammersüdthüringen
 haraldgollwitzerspezialtiefbauerdtiefbau
 heimerlemeulecom
+hellofresh
 hfbsteuerberatungsgesellschaft
 hornetsecurity
 howogewohnungsbauges
@@ -87,6 +91,7 @@ ingenieurbürozammit
 innovation
 jschmalz
 khs
+klettonlineweiterbildung
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
@@ -124,15 +129,18 @@ rohlik
 roland
 rossmann
 rth
+sartoriuscorporateadministration
 shwwerkzeugmaschinen
 signaliduna
 smarktmehrwert
 smartly
+smartlyio
 smasolartechnology
 stackfuel
 stadtwerkeesslingenamneckar
 stark
 statista
+stiftungwarentest
 stilord
 sundaynatural
 team
