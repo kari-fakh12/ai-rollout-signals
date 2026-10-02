@@ -12,7 +12,10 @@ allianzone
 allitkunststofftechnik
 almedia
 alnatura
+amc
 amssolutionkaarst
+applike
+aragkrankenversicherungs
 arbeitsservicestellefürinternationalestudienbewerbungenuniassist
 artefact
 artefactlinkedin
@@ -98,9 +101,11 @@ kskrealestatemanagement
 kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
 liebherrdigitaldevelopmentcenter
 lindner
+listan
 medhochschulehannover
 meffertfarbwerke
 mekralang
+mentifylearn
 mercedesbenz
 merck
 minolmesstechnikwlehmann
@@ -124,6 +129,7 @@ rallgemeineversicherung
 ramp106
 rathgeber
 renk
+rewe
 rewedigital
 rohlik
 roland
