@@ -12,6 +12,7 @@ allianzone
 allitkunststofftechnik
 almedia
 alnatura
+alnylampharmaceuticals
 amc
 amprion
 amssolutionkaarst
@@ -78,6 +79,7 @@ frank
 freseniusaa
 gematik
 goodhood
+goodhoodnebenan
 grimmelandmaschinenfabrik
 gwhwohnungsgesellschafthessen
 hamburgerenergienetze
@@ -159,6 +161,7 @@ tiptopdienstleistungen
 topvermögensverwaltung
 trbo
 tsiconsumergoods
+tytantechnologies
 tüvsüd
 uniassist
 uniontankeckstein
