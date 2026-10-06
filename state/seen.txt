@@ -26,6 +26,7 @@ auxmoney
 awin
 bato
 beckhoffautomation
+beglaubigt
 benuta
 bgbaubgderbauwirtschaft
 bgprevent
@@ -33,6 +34,7 @@ bikbsbservice
 bikeleasing
 blpdigital
 botsandpeopleproduct
+brosefahrzeugteile
 brunnerstühletischeobjektmöbel
 bung
 bwebrütereiweserems
@@ -63,7 +65,9 @@ drausbüttel
 döpfer
 eagleburgmann
 edri
+ejot
 energiesystemegroß
+ennovationhub
 epigenics
 erwinjunkermaschinenfabrik
 es
@@ -77,6 +81,7 @@ finovesta
 flossbachvonstorch
 frank
 freseniusaa
+gameduell
 gematik
 goodhood
 goodhoodnebenan
@@ -138,6 +143,7 @@ rewedigital
 rohlik
 roland
 rossmann
+rsu
 rth
 sartoriuscorporateadministration
 shwwerkzeugmaschinen
@@ -158,6 +164,7 @@ talentspringacademy
 team
 tgw
 thinkaboutit
+timetoact
 tiptopdienstleistungen
 topvermögensverwaltung
 trbo
