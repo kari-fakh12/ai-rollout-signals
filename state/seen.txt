@@ -33,6 +33,7 @@ bgprevent
 bikbsbservice
 bikeleasing
 blpdigital
+boehringeringelheimpharma
 botsandpeopleproduct
 brosefahrzeugteile
 brunnerstühletischeobjektmöbel
@@ -63,6 +64,7 @@ docuware
 dominihausverwaltungen
 drausbüttel
 döpfer
+döpferschulenschwandorf
 eagleburgmann
 edri
 ejot
@@ -136,6 +138,7 @@ plancraft
 planinternational
 pressedruckverlags
 privatize
+prokurasbeteiligungs
 rallgemeineversicherung
 ramp106
 rathgeber
@@ -154,8 +157,10 @@ smarktmehrwert
 smartly
 smartlyio
 smasolartechnology
+sonarsource
 sparkassemünsterlandost
 speedgoat
+sportalliance
 stackfuel
 stadtwerkeesslingenamneckar
 stark
