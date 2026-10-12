@@ -6,6 +6,7 @@ aclue
 adac
 aggerenergie
 akkodistechexperts
+alexanderthamm
 alexianerit
 allianz
 allianzone
@@ -70,6 +71,7 @@ eagleburgmann
 edri
 ejot
 energiesystemegroß
+ennistadtservice
 ennovationhub
 epigenics
 erwinjunkermaschinenfabrik
@@ -114,6 +116,7 @@ knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
 kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
+landeshauptstadtpotsdam
 liebherrdigitaldevelopmentcenter
 lindner
 listan
@@ -167,6 +170,7 @@ sparkassemünsterlandost
 speedgoat
 sportalliance
 stackfuel
+stadtsparkassesolingen
 stadtwerkeesslingenamneckar
 stark
 statista
