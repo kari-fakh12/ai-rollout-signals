@@ -25,6 +25,7 @@ artefact
 artefactlinkedin
 atania
 auxmoney
+avwversicherungsmakler
 awin
 bato
 beckhoffautomation
@@ -110,8 +111,10 @@ ingenieurbürozammit
 innovation
 josefrädlingerbauunternehmen
 jschmalz
+jupus
 khs
 klettonlineweiterbildung
+klinikdrfranzdengler
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
@@ -119,6 +122,7 @@ kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
 landeshauptstadtpotsdam
 liebherrdigitaldevelopmentcenter
 lindner
+liqidlig
 listan
 medhochschulehannover
 meffertfarbwerke
@@ -126,6 +130,7 @@ mekralang
 mentifylearn
 mercedesbenz
 merck
+minderleinsmühleandreashubmann
 minolmesstechnikwlehmann
 moonfare
 mstransporte
@@ -139,10 +144,12 @@ ostrom
 p3security
 pathwaysolutions
 patpatachon
+philips
 pipedrive
 pkfwms
 plancraft
 planinternational
+ppt
 pressedruckverlags
 privatize
 prokurasbeteiligungs
