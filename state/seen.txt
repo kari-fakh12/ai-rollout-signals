@@ -42,6 +42,7 @@ brosefahrzeugteile
 brunnerstühletischeobjektmöbel
 bung
 bwebrütereiweserems
+bwi
 böttcher
 capco
 chemnitzerverlagdruck
@@ -114,6 +115,7 @@ jschmalz
 jupus
 khs
 klettonlineweiterbildung
+klifovet
 klinikdrfranzdengler
 knuddels
 kreisausschussdesrheingautaunuskreises
@@ -124,6 +126,7 @@ liebherrdigitaldevelopmentcenter
 lindner
 liqidlig
 listan
+lovehoney
 medhochschulehannover
 meffertfarbwerke
 mekralang
@@ -135,6 +138,7 @@ minolmesstechnikwlehmann
 moonfare
 mstransporte
 neoshare
+netz16
 nexperia
 notion
 olx
@@ -183,6 +187,7 @@ stark
 statista
 stiftungwarentest
 stilord
+ströer
 sumup
 sundaynatural
 superhuman
@@ -207,10 +212,12 @@ verwaltungsberufsgenossenschaftvbg
 vivantesnetzwerkfürgesundheit
 vivenu
 vonovia
+vossko
 wago
 wbstrainingberlin
 wellendorffgoldcreationen
 werhahnnauen
+wiethecontent
 wilhelmtheisheizungsbausanitinstallation
 winnerspedition
 wirtschaftsgenossenschaftdeutschertierärzteeg
