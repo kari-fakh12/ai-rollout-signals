@@ -27,6 +27,7 @@ atania
 auxmoney
 avwversicherungsmakler
 awin
+barmer
 bato
 beckhoffautomation
 beglaubigt
@@ -70,6 +71,7 @@ drausbüttel
 döpfer
 döpferschulenschwandorf
 eagleburgmann
+ecovisbaylaunion
 edri
 ejot
 energiesystemegroß
@@ -95,10 +97,12 @@ gematik
 goodhood
 goodhoodnebenan
 grimmelandmaschinenfabrik
+guidecom
 gwhwohnungsgesellschafthessen
 hamburgerenergienetze
 handwerkskammersüdthüringen
 haraldgollwitzerspezialtiefbauerdtiefbau
+haufelexware
 hdi
 heimerlemeulecom
 hellofresh
@@ -148,6 +152,7 @@ ostrom
 p3security
 pathwaysolutions
 patpatachon
+pattr
 philips
 pipedrive
 pkfwms
@@ -194,6 +199,7 @@ superhuman
 talentspringacademy
 taxforce
 team
+telecolumbusnetzleipzig
 tgw
 thinkaboutit
 timetoact
