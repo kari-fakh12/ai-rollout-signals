@@ -4,6 +4,7 @@ aarealbank
 acadon
 aclue
 adac
+aedifion
 aggerenergie
 akkodistechexperts
 alexanderthamm
@@ -36,6 +37,7 @@ bgbaubgderbauwirtschaft
 bgprevent
 bikbsbservice
 bikeleasing
+bildungscampusbtzrohrkloster
 blpdigital
 boehringeringelheimpharma
 botsandpeopleproduct
@@ -63,6 +65,7 @@ deichmann
 deutscheschlaganfallhilfe
 dieautobahndesbundesberlin
 dierigtextilwerke
+digitaleleuteschool
 dkveuroservice
 dmtech
 docuware
@@ -107,6 +110,7 @@ hdi
 heimerlemeulecom
 hellofresh
 hfbsteuerberatungsgesellschaft
+hjbrüggen
 hornetsecurity
 howogewohnungsbauges
 hymmenmaschinenanlagenbau
@@ -114,6 +118,7 @@ ideallebensversicherung
 infraservgendorf
 ingenieurbürozammit
 innovation
+institutfürweiterbildungindkrankenaltenpflegeggmbh
 josefrädlingerbauunternehmen
 jschmalz
 jupus
@@ -126,6 +131,7 @@ kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
 kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
 landeshauptstadtpotsdam
+leitwerk
 liebherrdigitaldevelopmentcenter
 lindner
 liqidlig
@@ -149,6 +155,7 @@ olx
 onlinedoctor
 orbem
 ostrom
+ottobock
 p3security
 pathwaysolutions
 patpatachon
@@ -158,6 +165,7 @@ pipedrive
 pkfwms
 plancraft
 planinternational
+pollmeiermassivholz
 ppt
 pressedruckverlags
 privatize
@@ -202,6 +210,7 @@ team
 telecolumbusnetzleipzig
 tgw
 thinkaboutit
+thyssenkrupp
 timetoact
 tiptopdienstleistungen
 topvermögensverwaltung
@@ -212,6 +221,7 @@ tüvsüd
 uniassist
 uniontankeckstein
 universitätsklinikumkölnaör
+unternehmertum
 valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
