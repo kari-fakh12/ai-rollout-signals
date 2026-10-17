@@ -77,6 +77,7 @@ eagleburgmann
 ecovisbaylaunion
 edri
 ejot
+ellerellerarchitekten
 energiesystemegroß
 ennistadtservice
 ennovationhub
@@ -99,6 +100,7 @@ gameduell
 gematik
 goodhood
 goodhoodnebenan
+gotphoto
 grimmelandmaschinenfabrik
 guidecom
 gwhwohnungsgesellschafthessen
@@ -183,6 +185,7 @@ rossmann
 rsu
 rth
 sartoriuscorporateadministration
+scanhausmarlow
 shwwerkzeugmaschinen
 signaliduna
 smarktmehrwert
@@ -190,6 +193,7 @@ smartly
 smartlyio
 smasolartechnology
 sonarsource
+spardabanknürnbergeg
 sparkassemünsterlandost
 speedgoat
 sportalliance
