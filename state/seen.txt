@@ -26,6 +26,7 @@ artefact
 artefactlinkedin
 atania
 auxmoney
+avwunternehmensgruppe
 avwversicherungsmakler
 awin
 barmer
@@ -113,9 +114,11 @@ heimerlemeulecom
 hellofresh
 hfbsteuerberatungsgesellschaft
 hjbrüggen
+holzlandbecker
 hornetsecurity
 howogewohnungsbauges
 hymmenmaschinenanlagenbau
+hyplustechnology
 ideallebensversicherung
 infraservgendorf
 ingenieurbürozammit
@@ -154,6 +157,7 @@ netz16
 nexperia
 notion
 olx
+onemobility
 onlinedoctor
 orbem
 ostrom
