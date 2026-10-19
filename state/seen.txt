@@ -31,6 +31,7 @@ avwversicherungsmakler
 awin
 barmer
 bato
+becker
 beckhoffautomation
 beglaubigt
 benuta
@@ -113,6 +114,7 @@ hdi
 heimerlemeulecom
 hellofresh
 hfbsteuerberatungsgesellschaft
+hitchmanpartners
 hjbrüggen
 holzlandbecker
 hornetsecurity
@@ -124,6 +126,7 @@ infraservgendorf
 ingenieurbürozammit
 innovation
 institutfürweiterbildungindkrankenaltenpflegeggmbh
+intersnackit
 josefrädlingerbauunternehmen
 jschmalz
 jupus
@@ -155,6 +158,7 @@ mstransporte
 neoshare
 netz16
 nexperia
+nexsolve
 notion
 olx
 onemobility
