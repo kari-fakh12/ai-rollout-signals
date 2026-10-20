@@ -49,6 +49,7 @@ bung
 bwebrütereiweserems
 bwi
 böttcher
+cadenas
 capco
 chemnitzerverlagdruck
 circle
@@ -73,6 +74,7 @@ dmtech
 docuware
 dominihausverwaltungen
 drausbüttel
+drkurtwolff
 döpfer
 döpferschulenschwandorf
 eagleburgmann
@@ -93,6 +95,7 @@ evoilafrankfurt
 evotec
 exoconmanagement
 fastrocket
+ffpetfood
 finovesta
 flix
 flossbachvonstorch
@@ -116,6 +119,7 @@ hellofresh
 hfbsteuerberatungsgesellschaft
 hitchmanpartners
 hjbrüggen
+hkt
 holzlandbecker
 hornetsecurity
 howogewohnungsbauges
@@ -219,6 +223,7 @@ superhuman
 talentspringacademy
 taxforce
 team
+tectake
 telecolumbusnetzleipzig
 tgw
 thinkaboutit
@@ -237,6 +242,7 @@ unternehmertum
 valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
+virtusan
 vivantesnetzwerkfürgesundheit
 vivenu
 vonovia
