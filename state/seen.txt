@@ -69,6 +69,7 @@ deutscheschlaganfallhilfe
 dieautobahndesbundesberlin
 dierigtextilwerke
 digitaleleuteschool
+dirkrossmann
 dkveuroservice
 dmtech
 docuware
@@ -97,8 +98,10 @@ exoconmanagement
 fastrocket
 ffpetfood
 finovesta
+flaiguhommelverbindungselemente
 flix
 flossbachvonstorch
+fpsrechtsanwaltsgesellschaft
 frank
 freseniusaa
 gameduell
