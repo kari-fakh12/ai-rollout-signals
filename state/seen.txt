@@ -24,6 +24,7 @@ aragkrankenversicherungs
 arbeitsservicestellefürinternationalestudienbewerbungenuniassist
 artefact
 artefactlinkedin
+aruxia
 atania
 auxmoney
 avwunternehmensgruppe
@@ -153,6 +154,7 @@ liqidlig
 listan
 lovehoney
 medhochschulehannover
+medizinischerdienstberlinbrandenburgkdör
 meffertfarbwerke
 mekralang
 mentifylearn
@@ -201,12 +203,14 @@ rsu
 rth
 sartoriuscorporateadministration
 scanhausmarlow
+schott
 shwwerkzeugmaschinen
 signaliduna
 smarktmehrwert
 smartly
 smartlyio
 smasolartechnology
+softproject
 sonarsource
 spardabanknürnbergeg
 sparkassemünsterlandost
@@ -230,7 +234,9 @@ tectake
 telecolumbusnetzleipzig
 tgw
 thinkaboutit
+thoughtworksstandorthamburg
 thyssenkrupp
+thyssenkruppbilstein
 timetoact
 tiptopdienstleistungen
 topvermögensverwaltung
@@ -246,6 +252,7 @@ valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
 virtusan
+visionm
 vivantesnetzwerkfürgesundheit
 vivenu
 vonovia
