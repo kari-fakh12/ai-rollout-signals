@@ -82,6 +82,7 @@ döpferschulenschwandorf
 eagleburgmann
 ecovisbaylaunion
 edri
+eewenergyfromwaste
 ejot
 ellerellerarchitekten
 energiesystemegroß
@@ -107,11 +108,13 @@ frank
 freseniusaa
 gameduell
 gematik
+gemügebrmüllerapparatebau
 goodhood
 goodhoodnebenan
 gotphoto
 grimmelandmaschinenfabrik
 guidecom
+gullertwilkeigw
 gwhwohnungsgesellschafthessen
 hamburgerenergienetze
 handwerkskammersüdthüringen
@@ -130,6 +133,7 @@ howogewohnungsbauges
 hymmenmaschinenanlagenbau
 hyplustechnology
 ideallebensversicherung
+infineontechnologies
 infraservgendorf
 ingenieurbürozammit
 innovation
@@ -138,10 +142,12 @@ intersnackit
 josefrädlingerbauunternehmen
 jschmalz
 jupus
+kassenärztlichevereinigungbayerns
 khs
 klettonlineweiterbildung
 klifovet
 klinikdrfranzdengler
+klinikumosnabrück
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
@@ -234,6 +240,7 @@ tectake
 telecolumbusnetzleipzig
 tgw
 thinkaboutit
+thoughtworks
 thoughtworksstandorthamburg
 thyssenkrupp
 thyssenkruppbilstein
@@ -271,3 +278,4 @@ yoursquares
 zabaginternational
 zealnetwork
 zeinpharma
+öragrechtsschutzversicherungs
