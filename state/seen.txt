@@ -123,6 +123,7 @@ haufelexware
 hdi
 heimerlemeulecom
 hellofresh
+hermesarzneimittel
 hfbsteuerberatungsgesellschaft
 hitchmanpartners
 hjbrüggen
@@ -207,6 +208,7 @@ roland
 rossmann
 rsu
 rth
+sander
 sartoriuscorporateadministration
 scanhausmarlow
 schott
@@ -236,6 +238,7 @@ superhuman
 talentspringacademy
 taxforce
 team
+teambank
 tectake
 telecolumbusnetzleipzig
 tgw
@@ -266,6 +269,7 @@ vonovia
 vossko
 wago
 wbstrainingberlin
+webuildai
 wellendorffgoldcreationen
 werhahnnauen
 wiethecontent
