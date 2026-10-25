@@ -214,6 +214,7 @@ scanhausmarlow
 schott
 shwwerkzeugmaschinen
 signaliduna
+skaylink
 smarktmehrwert
 smartly
 smartlyio
@@ -256,6 +257,7 @@ tytantechnologies
 tüvsüd
 uniassist
 uniontankeckstein
+uniper
 universitätsklinikumkölnaör
 unternehmertum
 valentumengineering
