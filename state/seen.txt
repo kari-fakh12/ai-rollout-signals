@@ -66,6 +66,7 @@ cosuno
 cryptofinance
 currenta
 deichmann
+deickenengelsmaschinenfabrik
 deutscheschlaganfallhilfe
 dieautobahndesbundesberlin
 dierigtextilwerke
@@ -224,6 +225,7 @@ sonarsource
 spardabanknürnbergeg
 sparkassemünsterlandost
 speedgoat
+speira
 sportalliance
 stackfuel
 stadtsparkassesolingen
