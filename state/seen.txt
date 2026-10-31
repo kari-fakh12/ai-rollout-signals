@@ -70,6 +70,7 @@ cryptofinance
 currenta
 deichmann
 deickenengelsmaschinenfabrik
+deutschebahn
 deutscheschlaganfallhilfe
 dieautobahndesbundesberlin
 dierigtextilwerke
@@ -122,6 +123,7 @@ gotphoto
 grimmelandmaschinenfabrik
 guidecom
 gullertwilkeigw
+gurobioptimization
 gwhwohnungsgesellschafthessen
 hamburgerenergienetze
 handwerkskammersüdthüringen
@@ -241,6 +243,7 @@ speedgoat
 speira
 sportalliance
 spotmyenergy
+spread
 stackfuel
 stadtsparkassesolingen
 stadtwerkeesslingenamneckar
@@ -269,6 +272,7 @@ thyssenkruppbilstein
 timetoact
 tiptopdienstleistungen
 topvermögensverwaltung
+trawa
 trbo
 tsiconsumergoods
 tytantechnologies
@@ -279,6 +283,7 @@ uniper
 universitätkassel
 universitätsklinikumkölnaör
 unternehmertum
+upvest
 valentumengineering
 verderscientific
 verwaltungsberufsgenossenschaftvbg
