@@ -4,6 +4,8 @@ aarealbank
 acadon
 aclue
 adac
+adacniedersachsensachsenanhalt
+adacversicherung
 aedifion
 aggerenergie
 akkodistechexperts
@@ -26,6 +28,7 @@ arbeitsservicestellefürinternationalestudienbewerbungenuniassist
 artefact
 artefactlinkedin
 aruxia
+assecor
 atania
 auxmoney
 avwunternehmensgruppe
@@ -261,6 +264,7 @@ talentspringacademy
 taxforce
 team
 teambank
+technischehochschulenürnberggeorgsimonohmlandbayern
 tectake
 telecolumbusnetzleipzig
 tgw
