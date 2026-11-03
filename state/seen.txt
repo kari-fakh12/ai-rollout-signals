@@ -6,6 +6,7 @@ aclue
 adac
 adacniedersachsensachsenanhalt
 adacversicherung
+adkochmarketing
 aedifion
 aggerenergie
 akkodistechexperts
@@ -107,6 +108,7 @@ evoilafrankfurt
 evotec
 exoconmanagement
 fastrocket
+fernuniversitätinhagen
 ffpetfood
 finanzinformatik
 finetech
@@ -176,6 +178,7 @@ liqidlam
 liqidlig
 listan
 lovehoney
+maintea
 medhochschulehannover
 medizinischerdienstberlinbrandenburgkdör
 meffertfarbwerke
