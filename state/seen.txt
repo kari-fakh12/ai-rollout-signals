@@ -53,6 +53,7 @@ boehringeringelheimpharma
 botsandpeopleproduct
 brosefahrzeugteile
 brunnerstühletischeobjektmöbel
+bundesgesellschaftfürendlagerungbge
 bung
 bwebrütereiweserems
 bwi
@@ -227,6 +228,7 @@ rewe
 rewedigital
 rohlik
 roland
+rosentalorganics
 rossmann
 rsu
 rth
@@ -253,6 +255,7 @@ sportalliance
 spotmyenergy
 spread
 stackfuel
+stackworks
 stadtsparkassesolingen
 stadtwerkeesslingenamneckar
 stark
@@ -302,6 +305,7 @@ vivantesnetzwerkfürgesundheit
 vivenu
 vonovia
 vossko
+wagnertoolingsystemsbaublies
 wago
 wbstrainingberlin
 webuildai
