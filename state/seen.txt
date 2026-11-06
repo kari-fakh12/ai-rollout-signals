@@ -167,13 +167,16 @@ klifovet
 klinikdrfranzdengler
 klinikumosnabrück
 klinikumwormsggmbh
+knorrbremse
 knuddels
 kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
 kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
+käuffermanagement
 landeshauptstadtpotsdam
 leichtdigital
 leitwerk
+lemonmarkets
 liebherrdigitaldevelopmentcenter
 lindner
 liqidlam
@@ -215,6 +218,7 @@ pkfwms
 plancraft
 planinternational
 pollmeiermassivholz
+pplwise
 ppt
 pressedruckverlags
 privatize
@@ -232,11 +236,13 @@ rosentalorganics
 rossmann
 rsu
 rth
+rönnerverwaltungsgesellschaft
 sander
 sartoriuscorporateadministration
 scanhausmarlow
 schott
 schöneberg
+serengetiparkhodenhagen
 shwwerkzeugmaschinen
 signaliduna
 skaylink
@@ -310,6 +316,7 @@ wago
 wbstrainingberlin
 webuildai
 wellendorffgoldcreationen
+werawerkzeuge
 werhahnnauen
 wiethecontent
 wilhelmtheisheizungsbausanitinstallation
