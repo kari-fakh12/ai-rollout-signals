@@ -35,6 +35,7 @@ auxmoney
 avwunternehmensgruppe
 avwversicherungsmakler
 awin
+baringa
 barmer
 bato
 bayerpharmaceuticals
@@ -60,6 +61,7 @@ bwi
 böttcher
 cadenas
 capco
+check24
 chemnitzerverlagdruck
 circle
 ckm
@@ -97,6 +99,7 @@ ejot
 ellerellerarchitekten
 energiesystemegroß
 engelhart
+engineeringpeople
 ennistadtservice
 ennovationhub
 epigenics
@@ -117,12 +120,14 @@ finovesta
 flaiguhommelverbindungselemente
 flix
 flossbachvonstorch
+foodji
 fpsrechtsanwaltsgesellschaft
 frank
 freseniusaa
 gameduell
 gematik
 gemügebrmüllerapparatebau
+gmsgourmet
 goodhood
 goodhoodnebenan
 gotphoto
@@ -203,6 +208,7 @@ nexsolve
 notion
 obungi
 olx
+olympiaverlag
 onemobility
 onlinedoctor
 orbem
@@ -222,6 +228,7 @@ pplwise
 ppt
 pressedruckverlags
 privatize
+projectbay
 prokurasbeteiligungs
 raisin
 rallgemeineversicherung
@@ -290,6 +297,7 @@ thyssenkrupp
 thyssenkruppbilstein
 timetoact
 tiptopdienstleistungen
+toitoidixi
 topvermögensverwaltung
 trawa
 trbo
