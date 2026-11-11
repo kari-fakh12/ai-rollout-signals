@@ -61,6 +61,7 @@ bwi
 böttcher
 cadenas
 capco
+carmasec
 check24
 chemnitzerverlagdruck
 circle
@@ -207,6 +208,7 @@ nexperia
 nexsolve
 notion
 obungi
+odu
 olx
 olympiaverlag
 onemobility
@@ -229,6 +231,7 @@ ppt
 pressedruckverlags
 privatize
 projectbay
+projecttogetherggmbh
 prokurasbeteiligungs
 raisin
 rallgemeineversicherung
