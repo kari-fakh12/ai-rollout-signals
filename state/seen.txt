@@ -9,6 +9,7 @@ adacversicherung
 adkochmarketing
 aedifion
 aggerenergie
+airbusoperationswerkbremen
 akkodistechexperts
 alexanderthamm
 alexianerit
@@ -23,6 +24,7 @@ amc
 amprion
 amssolutionkaarst
 anandaventures
+angeheuert
 applike
 aragkrankenversicherungs
 arbeitsservicestellefürinternationalestudienbewerbungenuniassist
@@ -117,8 +119,10 @@ fernuniversitätinhagen
 ffpetfood
 finanzinformatik
 finetech
+finodataservices
 finovesta
 flaiguhommelverbindungselemente
+flip
 flix
 flossbachvonstorch
 foodji
@@ -253,6 +257,7 @@ scanhausmarlow
 schott
 schöneberg
 serengetiparkhodenhagen
+servicehaussonnenhaldemsg
 shwwerkzeugmaschinen
 signaliduna
 signalidunakrankenversicherung
