@@ -80,6 +80,7 @@ cryptofinance
 currenta
 deichmann
 deickenengelsmaschinenfabrik
+destinusgroup
 deutschebahn
 deutscheschlaganfallhilfe
 dieautobahndesbundesberlin
@@ -243,6 +244,7 @@ raisin
 rallgemeineversicherung
 ramp106
 rathgeber
+rebuy
 renk
 rewe
 rewedigital
