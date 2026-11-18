@@ -74,6 +74,7 @@ circle
 ckm
 clicksdigital
 climate
+clostermannjasperpartnerschaft
 codico
 collaborationbetterstheworld
 commerzbank
@@ -151,6 +152,7 @@ guidecom
 gullertwilkeigw
 gurobioptimization
 gwhwohnungsgesellschafthessen
+hambergersanitary
 hamburgerenergienetze
 handwerkskammersüdthüringen
 haraldgollwitzerspezialtiefbauerdtiefbau
@@ -358,6 +360,8 @@ wiethecontent
 wilhelmtheisheizungsbausanitinstallation
 winnerspedition
 wirtschaftsgenossenschaftdeutschertierärzteeg
+wongdoody
+wwm
 xcnt
 xolife
 xxxlutz
