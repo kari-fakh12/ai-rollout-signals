@@ -87,6 +87,7 @@ deichmann
 deickenengelsmaschinenfabrik
 destinusgroup
 deutschebahn
+deutschebundesbank
 deutscheschlaganfallhilfe
 deutz
 dieautobahndesbundesberlin
@@ -207,6 +208,7 @@ lindner
 liqidlam
 liqidlig
 listan
+logisticaos
 lovehoney
 maintea
 medhochschulehannover
@@ -227,6 +229,7 @@ neoshare
 netz16
 nexperia
 nexsolve
+nexus
 notion
 obungi
 odu
@@ -251,6 +254,7 @@ pollmeiermassivholz
 pplwise
 ppt
 pressedruckverlags
+pricewaterhousecooperswpg
 privatize
 projectbay
 projecttogetherggmbh
