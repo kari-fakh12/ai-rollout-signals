@@ -60,6 +60,7 @@ boehringeringelheimpharma
 botsandpeopleproduct
 brosefahrzeugteile
 brunnerstühletischeobjektmöbel
+bsteuern
 bundesgesellschaftfürendlagerungbge
 bung
 bwebrütereiweserems
@@ -90,6 +91,7 @@ deutschebahn
 deutschebundesbank
 deutscheschlaganfallhilfe
 deutz
+dhl
 dieautobahndesbundesberlin
 dierigtextilwerke
 digitaleleuteschool
@@ -143,6 +145,7 @@ freseniusaa
 gameduell
 gematik
 gemügebrmüllerapparatebau
+genobroker
 getyourguide
 gmsgourmet
 goodhood
@@ -166,6 +169,7 @@ hfbsteuerberatungsgesellschaft
 hitchmanpartners
 hjbrüggen
 hkt
+hochschulefürtechnikwirtschaftdessaarlandes
 holzlandbecker
 hornetsecurity
 howogewohnungsbauges
@@ -210,7 +214,9 @@ liqidlig
 listan
 logisticaos
 lovehoney
+löwensteinmedtechn
 maintea
+maxbrain
 medhochschulehannover
 mediglobe
 medizinischerdienstberlinbrandenburgkdör
