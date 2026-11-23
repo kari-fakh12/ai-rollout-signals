@@ -143,6 +143,7 @@ foodji
 fpsrechtsanwaltsgesellschaft
 frank
 freseniusaa
+gablerthermoform
 gameduell
 gematik
 gemügebrmüllerapparatebau
@@ -159,6 +160,7 @@ gurobioptimization
 gwhwohnungsgesellschafthessen
 hambergersanitary
 hamburgerenergienetze
+handwerkskammerbraunschweiglüneburgstade
 handwerkskammersüdthüringen
 haraldgollwitzerspezialtiefbauerdtiefbau
 haufelexware
@@ -179,6 +181,7 @@ hubside
 hymmenmaschinenanlagenbau
 hyplustechnology
 ideallebensversicherung
+inca
 infineontechnologies
 infraservgendorf
 ingenieurbürozammit
@@ -234,6 +237,7 @@ moonfare
 mstransporte
 neoshare
 netz16
+neuewege
 nexperia
 nexsolve
 nexus
@@ -263,6 +267,7 @@ ppt
 pressedruckverlags
 pricewaterhousecooperswpg
 privatize
+procuvia
 projectbay
 projecttogetherggmbh
 prokurasbeteiligungs
@@ -279,6 +284,7 @@ rohlik
 roland
 rosentalorganics
 rossmann
+rsearchitekteningenieure
 rsu
 rth
 rönnerverwaltungsgesellschaft
@@ -326,6 +332,7 @@ taxforce
 team
 teambank
 technischehochschulenürnberggeorgsimonohmlandbayern
+technischeuniversitätbraunschweiglandniedersachsen
 tectake
 telecolumbusnetzleipzig
 tgw
@@ -341,6 +348,7 @@ topvermögensverwaltung
 trawa
 trbo
 tsiconsumergoods
+tulipinterfaces
 tytantechnologies
 tüvsüd
 uniassist
