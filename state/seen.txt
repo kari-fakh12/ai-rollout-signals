@@ -77,6 +77,7 @@ ckm
 clicksdigital
 climate
 clostermannjasperpartnerschaft
+cobusconcept
 codico
 collaborationbetterstheworld
 commerzbank
@@ -146,6 +147,7 @@ fpsrechtsanwaltsgesellschaft
 frank
 freseniusaa
 gablerthermoform
+gambit
 gameduell
 gematik
 gemügebrmüllerapparatebau
@@ -242,6 +244,7 @@ mstransporte
 neoshare
 netz16
 neuewege
+neurawork
 nexperia
 nexsolve
 nexus
@@ -317,6 +320,7 @@ speira
 sportalliance
 spotmyenergy
 spread
+spruckitservice
 stackfuel
 stackworks
 stadtsparkassesolingen
@@ -352,6 +356,7 @@ topvermögensverwaltung
 trawa
 trbo
 tsiconsumergoods
+tulip
 tulipinterfaces
 tytantechnologies
 tüvsüd
