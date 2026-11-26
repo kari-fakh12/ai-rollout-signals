@@ -70,6 +70,7 @@ böttcher
 cadenas
 capco
 carmasec
+chapters
 check24
 chemnitzerverlagdruck
 circle
@@ -129,6 +130,7 @@ evangelischesklinikumgelsenkirchen
 everllence
 evoilafrankfurt
 evotec
+excellingventures
 exoconmanagement
 fastrocket
 fernuniversitätinhagen
@@ -138,6 +140,7 @@ finetech
 finodataservices
 finovesta
 fintegraservice
+fiskaly
 flaiguhommelverbindungselemente
 flip
 flix
@@ -174,9 +177,11 @@ hellofresh
 hermesarzneimittel
 hfbsteuerberatungsgesellschaft
 hitchmanpartners
+hitserviceih
 hjbrüggen
 hkt
 hochschulefürtechnikwirtschaftdessaarlandes
+hoerbiger
 holzlandbecker
 hornetsecurity
 howogewohnungsbauges
@@ -212,6 +217,7 @@ kreisausschussdesrheingautaunuskreises
 kskrealestatemanagement
 kuhnpartnerrechtsanwältesteuerberaterwirtschaftsprüfermbb
 käuffermanagement
+lambertschlun
 landeshauptstadtpotsdam
 leichtdigital
 leitwerk
@@ -226,6 +232,7 @@ lovehoney
 löwensteinmedtechn
 magazino
 maintea
+mantruckbus
 maxbrain
 medhochschulehannover
 mediglobe
@@ -276,6 +283,7 @@ pricewaterhousecooperswpg
 privatize
 procuvia
 projectbay
+projectbayworkationhotel
 projecttogetherggmbh
 prokurasbeteiligungs
 rainforrentinternational
