@@ -88,6 +88,7 @@ cosuno
 cryptofinance
 currenta
 daimlertruck
+deepjudge
 deichmann
 deickenengelsmaschinenfabrik
 destinusgroup
@@ -234,6 +235,7 @@ magazino
 maintea
 mantruckbus
 maxbrain
+mayredelstahlmetallkonstruktionen
 medhochschulehannover
 mediglobe
 medizinischerdienstberlinbrandenburgkdör
@@ -331,6 +333,7 @@ spread
 spruckitservice
 stackfuel
 stackworks
+stadtnortheim
 stadtsparkassesolingen
 stadtwerkeesslingenamneckar
 stark
